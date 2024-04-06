@@ -9,7 +9,7 @@ const useGetConversations = () => {
         const getConversations = async () => {
             setLoading(true)
             try {
-                const backednURLforDev="http://localhost:5000/"
+             const backednURLforDev="http://localhost:5000/"
 
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
                 const token = localStorage.getItem("access-token")

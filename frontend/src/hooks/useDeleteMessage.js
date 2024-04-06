@@ -10,9 +10,11 @@ const useDeleteMessage = () => {
     const deleteMessage = async (messageId) => {
         setLoading(true)
         try {
+            const backednURLforDev="http://localhost:5000/"
 
+            const backendURL="https://chat-app-backend-pp0h.onrender.com/"
             const token = localStorage.getItem("access-token")
-            const res = await fetch(`http://localhost:5000/api/messages/delete/${selectedConversation._id}`, {
+            const res = await fetch(`${backendURL}api/messages/delete/${selectedConversation._id}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

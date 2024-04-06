@@ -9,8 +9,11 @@ const useGetConversations = () => {
         const getConversations = async () => {
             setLoading(true)
             try {
+                const backednURLforDev="http://localhost:5000/"
+
+            const backendURL="https://chat-app-backend-pp0h.onrender.com/"
                 const token = localStorage.getItem("access-token")
-                const res = await fetch("http://localhost:5000/api/users", {
+                const res = await fetch(`${backendURL}api/users`, {
                     method: "GET",
                     headers: {
 

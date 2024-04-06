@@ -13,7 +13,10 @@ const useSignup = () => {
         //suppose sucess, now use try catch and save user in database
 
         try {
-            const res = await fetch("http://localhost:5000/api/auth/signup", {
+            const backednURLforDev="http://localhost:5000/"
+
+            const backendURL="https://chat-app-backend-pp0h.onrender.com/"
+            const res = await fetch(`{backendURL}api/auth/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

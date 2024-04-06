@@ -14,8 +14,8 @@ const useLogin = () => {
         try {
             const backednURLforDev="http://localhost:5000/"
 
-            const backendURL="https://chat-app-backend-pp0h.onrender.com/"
-            const res = await fetch(`{backendURL}api/auth/login`, {
+            const backendURL="https://chat-app-backend-pp0h.onrender.com"
+            const res = await fetch(`{backendURL}/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

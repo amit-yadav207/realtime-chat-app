@@ -85,21 +85,21 @@ const __dirname = path.resolve()
 
 
 // // CORS headers
-// app.use((req, res, next) => {
+app.use((req, res, next) => {
 
-//     //http://localhost:3000   chenged herre HEREEE**************
-//     res.header('Access-Control-Allow-Origin', '*');
-//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-//     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-//     res.header('Access-Control-Allow-Credentials', 'true');
+    //http://localhost:3000   chenged herre HEREEE**************
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Credentials', 'true');
 
-//     // Handle preflight requests
-//     if (req.method === 'OPTIONS') {
-//         res.sendStatus(200);
-//     } else {
-//         next();
-//     }
-// });
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        res.sendStatus(200);
+    } else {
+        next();
+    }
+});
 
 // Using middleware to create routes with less code
 app.use("/api/auth", authRoutes);

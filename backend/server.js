@@ -107,7 +107,9 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
 
-
+app.get('/',(req,res)=>{
+    res.json("message:success")
+})
 
 app.use(express.static(path.join(__dirname, "/frontend/build")))
 

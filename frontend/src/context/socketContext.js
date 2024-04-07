@@ -67,11 +67,13 @@ export const SocketContextProvider = ({ children }) => {
     useEffect(() => {
         const connectSocket = () => {
             try {
+                const url="https://chat-app-realtime-cd4sq70le-amit-yadavs-projects-ec98a153.vercel.app/"
+
 
                 const backednURLforDev = "http://localhost:5000/"
 
                 const backendURL = "https://chat-app-backend-pp0h.onrender.com/"
-                const newSocket = io(`${backednURLforDev}`, {
+                const newSocket = io(`${backendURL}`, {
                     query: {
                         userId: authUser._id
                     }

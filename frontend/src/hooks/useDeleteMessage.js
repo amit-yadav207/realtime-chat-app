@@ -14,7 +14,7 @@ const useDeleteMessage = () => {
 
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
             const token = localStorage.getItem("access-token")
-            const res = await fetch(`${backednURLforDev}api/messages/delete/${selectedConversation._id}`, {
+            const res = await fetch(`${backendURL}api/messages/delete/${selectedConversation._id}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

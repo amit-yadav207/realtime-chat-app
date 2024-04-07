@@ -10,10 +10,12 @@ const useLogout = () => {
     const logout = async () => {
         setLoading(true)
         try {
+            const url="https://chat-app-realtime-cd4sq70le-amit-yadavs-projects-ec98a153.vercel.app/"
+
             const backednURLforDev="http://localhost:5000/"
 
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
-            const res = await fetch(`${backednURLforDev}api/auth/logout`, {
+            const res = await fetch(`${backendURL}api/auth/logout`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

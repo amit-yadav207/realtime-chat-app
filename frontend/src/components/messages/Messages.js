@@ -13,7 +13,7 @@ const Messages = () => {
 	const { authUser } = useAuthContext()
 
 
-
+// console.log("at front" ,messages)
 	useListenMessages()
 	const lastMessageRef = useRef();
 
@@ -25,7 +25,7 @@ const Messages = () => {
 	}, [messages]);
 
 	return (
-		<div className='px-4 flex-1 overflow-auto'>
+		<div className='px-4 flex-1 overflow-auto  '>
 			{!loading && messages.length > 0 && messages?.map((messageContainer) => {
 
 				return (<div key={messageContainer._id} ref={lastMessageRef}>
@@ -35,7 +35,7 @@ const Messages = () => {
 			})}
 
 			{loading && [...Array(3)].map((_, index) => <MessageSkeleton key={index} />)}
-			{!loading && messages.length === 0 && <p className='text-center'>Send a message to start conversation</p>}
+			{!loading && messages.length === 0 && <p className='text-center py-2'>Send a message to start conversation</p>}
 		</div>
 	);
 

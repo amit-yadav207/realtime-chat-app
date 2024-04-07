@@ -14,7 +14,7 @@ const useGetMessages = () => {
 
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
                 const token = localStorage.getItem("access-token")
-                const res = await fetch(`${backendURL}api/messages/${selectedConversation._id}`, {
+                const res = await fetch(`${backednURLforDev}api/messages/${selectedConversation._id}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json",

@@ -15,7 +15,7 @@ const useSendMessage = () => {
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
 
             const token = localStorage.getItem("access-token")
-            const res = await fetch(`${backendURL}api/messages/send/${selectedConversation._id}`, {
+            const res = await fetch(`${backednURLforDev}api/messages/send/${selectedConversation._id}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

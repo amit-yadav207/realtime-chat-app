@@ -14,7 +14,7 @@ const useDeleteMessage = () => {
 
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
             const token = localStorage.getItem("access-token")
-            const res = await fetch(`${backendURL}api/messages/delete/${selectedConversation._id}`, {
+            const res = await fetch(`${backednURLforDev}api/messages/delete/${selectedConversation._id}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -28,7 +28,7 @@ const useDeleteMessage = () => {
                 throw new Error(data.error)
             }
             setLoading(false)
-            // console.log("data receied on clickings send button", data)
+            console.log("data receied on clickings send button", data)
             setMessages(data)//error waas here also
 
         } catch (error) {

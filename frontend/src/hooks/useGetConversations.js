@@ -13,7 +13,7 @@ const useGetConversations = () => {
 
             const backendURL="https://chat-app-backend-pp0h.onrender.com/"
                 const token = localStorage.getItem("access-token")
-                const res = await fetch(`${backendURL}api/users`, {
+                const res = await fetch(`${backednURLforDev}api/users`, {
                     method: "GET",
                     headers: {
 

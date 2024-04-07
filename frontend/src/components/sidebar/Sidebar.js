@@ -2,14 +2,17 @@ import Conversations from "./Conversations";
 import LogoutButton from "./LogoutButton";
 import SearchInput from "./SearchInput";
 
-const Sidebar = () => {
+const Sidebar = ({ isOpenSideBar }) => {
 	return (
-		<div className='border-r border-slate-500 p-4 flex flex-col'>
+
+		<div className={`p-4 md:w-2/5 ${!isOpenSideBar ? 'hidden' : ''} md:flex flex-col border-r border-slate-500`}>
 			<SearchInput />
-			<div className='divider px-3'></div>
+			<div className='divider px-3 my-1'></div>
 			<Conversations />
 			<LogoutButton />
 		</div>
+
+
 	);
 };
 export default Sidebar;

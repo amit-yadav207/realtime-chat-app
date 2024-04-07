@@ -40,9 +40,9 @@ function App() {
 	const { authUser } = useAuthContext();
 
 	const loggedIn = Object.keys(authUser).length !== 0
-
+	const currentYear = new Date().getFullYear();
 	return (
-		<div className='p-4 h-screen flex items-center justify-center'>
+		<div className=' py-10 h-screen flex flex-col gap-2 items-center justify-center '>
 			<Routes>
 				<Route path='/' element={loggedIn ? <Home /> : <Navigate to={"/login"} />} />
 				<Route path='/login' element={loggedIn ? <Navigate to='/' /> : <Login />} />
@@ -51,6 +51,17 @@ function App() {
 
 			</Routes>
 			<Toaster />
+			{/*<span className="text-white font-semibold text-sm">© {currentYear} <span role="img" aria-label="heart">❤️</span> Amit Yadav</span>*/}
+			<a
+				href="https://github.com/amit-yadav207/realtime-chat-app"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-white font-semibold text-sm"
+			>
+				© {currentYear} <span role="img" aria-label="heart">❤️</span> Amit Yadav
+			</a>
+
+
 		</div>
 	);
 }

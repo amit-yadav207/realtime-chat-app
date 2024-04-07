@@ -66,7 +66,7 @@ const MessageInput = () => {
 
 
 	return (
-		<form className='px-4 my-3' onSubmit={handleSubmit}>
+		<form className='px-2 my-3' onSubmit={handleSubmit}>
 			<div className='relative'>
 				{showEmojiPicker && (
 					<div className='absolute bottom-full left-0 mt-2'>
@@ -98,7 +98,7 @@ const MessageInput = () => {
 					autoFocus
 					type='text'
 					className='border text-sm rounded-lg block w-full p-2.5 pl-10 pr-10 bg-gray-700 border-gray-600 text-white' // Adjusted padding-left to accommodate the emoji button
-					placeholder='Send a message'
+					placeholder='Send a message...'
 					value={message}
 					onChange={(e) => setMessage(e.target.value)}
 					onFocus={() => setShowEmojiPicker(false)}

@@ -67,11 +67,11 @@ export const SocketContextProvider = ({ children }) => {
     useEffect(() => {
         const connectSocket = () => {
             try {
-                
-                const backednURLforDev="http://localhost:5000/"
 
-            const backendURL="https://chat-app-backend-pp0h.onrender.com/"
-                const newSocket = io(`${backendURL}`, {
+                const backednURLforDev = "http://localhost:5000/"
+
+                const backendURL = "https://chat-app-backend-pp0h.onrender.com/"
+                const newSocket = io(`${backednURLforDev}`, {
                     query: {
                         userId: authUser._id
                     }

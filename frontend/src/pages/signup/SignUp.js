@@ -37,14 +37,14 @@ const SignUp = () => {
             <div className='w-full p-6 rounded-lg shadow-sm bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
                 <h1 className='text-3xl font-semibold text-center text-gray-300'>
                     Signup
-                    <span className='text-green-500'> MyChatApp</span>
+                    <span className='text-green-500'> ReactChatApp</span>
                 </h1>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label className='label p-2'>
                             <span className='text-base label-text'>Full Name</span>
                         </label>
-                        <input type='text' placeholder='Amit Yadav' className='w-full input input-bordered h-10' value={inputs.fullName} onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })} />
+                        <input type='text' placeholder='Enter your fullName' className='w-full input input-bordered h-10' value={inputs.fullName} onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })} />
                     </div>
                     <div>
                         <label className='label p-2'>
@@ -53,7 +53,7 @@ const SignUp = () => {
                         <input
                             name="username"
                             autoComplete="username"
-                            type='text' placeholder='amityadav123'
+                            type='text' placeholder='Username'
                             className='w-full input input-bordered h-10'
                             value={inputs.username}
                             onChange={(e) => setInputs({ ...inputs, username: e.target.value })}

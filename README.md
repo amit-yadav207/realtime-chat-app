@@ -2,6 +2,16 @@
 
 Welcome to the Realtime Chat App! This application allows users to engage in real-time conversations, send emojis, share images, and receive notification sounds when new messages appear. Additionally, it features video and audio calling functionalities, currently in development.
 
+
+
+## Live Preview
+
+Check out the live preview of the project to see it in action:
+
+[Live Preview](https://chat-app-realtime-wine.vercel.app/)
+
+Feel free to explore the features and functionalities!
+
 ## Previews
 
 <img width="960" alt="Screenshot 2024-04-06 124538" src="https://github.com/amit-yadav207/chat-app-frontend/assets/99413482/a0879e05-c776-4253-868e-5aefb1f46ff4">

@@ -7,7 +7,7 @@ const Conversations = () => {
 	const { loading, conversations } = useGetConversations();
 	// console.log("conversations in sidebar rendred")
 	return (
-		<div className='py-4 flex flex-col overflow-auto grow '>
+		<div className='py-4 flex flex-col overflow-y-auto  '>
 			{conversations.map((conversation, idx) => (
 				<Conversation
 					key={conversation._id}

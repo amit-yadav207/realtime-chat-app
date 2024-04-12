@@ -55,7 +55,7 @@ const MessageContainer = ({ isOpenSideBar ,setIsOpenSideBar}) => {
     return (
 
 
-        <div className={`flex flex-col md:w-3/5 w-full h-full `}>
+        <div className={`flex flex-col md:w-3/5 w-full md:h-full min-h-80 `}>
             {!selectedConversation ? (
                 <NoChatSelected />
             ) : (
